@@ -4,19 +4,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 
-a = 5
-b = -6
-c = 5
-
 ## Calc Vertex
 def calc_xv(a,b):
     return -b/(2*a)
 
 def calc_yv(x,b,c):
     return x**2-abs(b)*x+c
-
-xv = calc_xv(a, b)
-yv = calc_yv(xv, b, c)
 
 ###########################
 
@@ -35,22 +28,23 @@ def calc_cut_off_points(a,b,c):
 def calc_parabola(x,a,b,c):
     return a*x**2+b*x+c
 
-# Range Points
-x = np.linspace(int(xv)-5,int(xv)+5,100)
-y = calc_parabola(x, a, b, c)
+def main(a, b, c):
+    xv = calc_xv(a, b)
+    yv = calc_yv(xv, b, c)
 
-# Print Points
-plt.plot(x,y)
+    # Range Points
+    x = np.linspace(int(xv)-5,int(xv)+5,100)
+    y = calc_parabola(x, a, b, c)
 
-# Axis
-plt.axhline(y=0, color='black', linestyle='-')
-plt.axvline(x=0, color='black', linestyle='-')
+    # Print Points
+    plt.plot(x,y)
+
+    # Axis
+    plt.axhline(y=0, color='black', linestyle='-')
+    plt.axvline(x=0, color='black', linestyle='-')
+    plt.savefig('./calc_img/calc.png')
 
 
-    
-    
-    
-
-
+main(5, -6, 5)
 
     

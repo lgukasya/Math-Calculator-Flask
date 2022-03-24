@@ -19,4 +19,6 @@ def home():
 ### Math ###
 @app.route("/parabola", methods=['POST'])
 def parabola():
-    print(request)
+    variables = request.json['variables']
+    
+    return "hi"
