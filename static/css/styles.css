@@ -1,0 +1,42 @@
+/* Styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+body{
+    background: #396afc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Arimo', sans-serif;
+    box-sizing: border-box;
+}
+
+#app{
+    margin-top: 10%;
+}
+
+h2{font-weight: bold; color: #141414;}
+hr{ margin: 0 !important; }
+
+.img-responsive{
+    max-width: 250px;
+    height: auto;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+}
+
+#submit{
+    padding: 5px;
+    width: 50%;
+    background-color: #ccc8c8;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    border: none;
+    transition: all .2s;
+}
+
+#submit:hover{
+    background-color: #a7a2a2;
+}
