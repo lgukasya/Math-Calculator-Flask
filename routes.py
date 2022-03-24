@@ -1,6 +1,11 @@
+from calendar import c
+from urllib import response
 from flask import jsonify, render_template, request
 from app import app
-
+from parabola import main_parabola
+import base64
+import os
+from time import sleep
 
 # Headers
 @app.after_request
@@ -19,6 +24,12 @@ def home():
 ### Math ###
 @app.route("/parabola", methods=['POST'])
 def parabola():
-    variables = request.json['variables']
+    sleep(3)
+    var = request.json['variables']
     
-    return "hi"
+    main_parabola(a=var['a'], b=var['b'], c=var['c'])
+
+    with open('./calc_img/parabola.png', 'rb') as imf: 
+        encoded_string = base64.b64encode(imf.read())
+
+    return encoded_string

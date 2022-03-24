@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
 import matplotlib.pyplot as plt
 import numpy as np
 import math
@@ -28,7 +29,15 @@ def calc_cut_off_points(a,b,c):
 def calc_parabola(x,a,b,c):
     return a*x**2+b*x+c
 
-def main(a, b, c):
+def main_parabola(a, b, c):
+    
+    # Clear Plot
+    plt.clf()
+
+    a = int(a)
+    b = int(b)
+    c = int(c)
+
     xv = calc_xv(a, b)
     yv = calc_yv(xv, b, c)
 
@@ -42,9 +51,6 @@ def main(a, b, c):
     # Axis
     plt.axhline(y=0, color='black', linestyle='-')
     plt.axvline(x=0, color='black', linestyle='-')
-    plt.savefig('./calc_img/calc.png')
-
-
-main(5, -6, 5)
-
+    plt.savefig('./calc_img/parabola.png')
     
+

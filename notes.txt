@@ -1,0 +1,3 @@
+next updates:
+add 2 parabolas and find the intersections
+add lateral parabolas	
